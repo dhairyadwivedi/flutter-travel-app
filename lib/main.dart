@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Scaffold(
+    home: Home()
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text('First App'),
         centerTitle: true,
@@ -10,7 +17,7 @@ void main() {
       ),
       body: Center(
         child: Text(
-            'Hello',
+          'Hello',
           style: TextStyle(
             fontSize: 95.0,
             fontWeight: FontWeight.bold,
@@ -25,6 +32,6 @@ void main() {
         child: Text('+'),
         backgroundColor: Colors.pink,
       ),
-    ),
-  ));
+    );
+  }
 }
