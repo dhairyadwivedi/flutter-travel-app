@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui_starter/widgets/destination_carousel.dart';
+import 'package:flutter_travel_ui_starter/widgets/hotel_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -36,7 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Icon(
           _icons[index],
           size: 25.0,
-          color: _selectedIndex == index ? Theme.of(context).primaryColor : Color(0xFFb4C1C4),
+          color: _selectedIndex == index
+              ? Theme.of(context).primaryColor
+              : Color(0xFFb4C1C4),
         ),
       ),
     );
@@ -69,6 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SizedBox(height: 30.0),
           DestinationCarousel(),
+          SizedBox(height: 30.0),
+          HotelCarousel(),
         ],
       ),
     ));
